@@ -12,57 +12,63 @@
 
 		<body>
 			<div class="container">
-				<form class="col s12" name="niceForm">
+				<form class="col s12" name="niceForm" action="dump.php" method="POST">
 					<div class="row">
 						<h1 class="form-header">Getting Started With Mellon</h1>
 						<p class="flow-text">Here are a couple of form fields with thoughtfully filled-out values for testing. Make sure text in non-password fields doesn't inadvertedly get changed. </p>
 					</div>
 					<div class="row">
-        		<div class="input-field col m6 s12">
-	          	<input placeholder="Saruman" id="title" type="text" class="validate" value="Gandalf">
-	          	<label class="active" for="title">Title</label>
-	        	</div>
-
-	        	<div class="input-field col m6 s12">
-	          	<input placeholder="bilbo@shire.com" id="email" type="email" class="validate" value="thorin@erebor.gold">
-	          	<label class="active" for="email">Email</label>
-	        	</div>
-      		</div>
-      		<div class="row">
-      			<div class="input-field col s12">
-      				<input placeholder="ninjapass" id="pwd" type="password" class="validate" value="supersecure">
-      				<label class="active" for="pwd">Password</label>
-      			</div>
-      		</div>
-      		<div class="row">
-      			<button class="btn waves-effect waves-light btn-large" type="submit" name="login" id="login">LOGIN
-    					<i class="material-icons"></i>
-  					</button>
+						<div class="input-field col m6 s12">
+					  	<input placeholder="Saruman" id="title" name="title" type="text" class="validate" value="Gandalf">
+					  	<label class="active" for="title">Title</label>
+						</div>
+					
+						<div class="input-field col m6 s12">
+					  	<input placeholder="bilbo@shire.com" id="email" name="email" type="email" class="validate" value="thorin@erebor.gold">
+					  	<label class="active" for="email">Email</label>
+						</div>
+      				</div>
+		      		<div class="row">
+		      			<div class="input-field col s12">
+		      				<input placeholder="ninjapass" id="pwd" name="pwd" type="password" class="validate" value="supersecure">
+		      				<label class="active" for="pwd">Password</label>
+		      			</div>
+		      		</div>
+		      		<div class="row">
+		      			<button class="btn waves-effect waves-light btn-large" type="submit" name="login" id="login">LOGIN
+		    					<i class="material-icons"></i>
+		  				</button>
+					</div>
 				</form>
-			</div>
-			<div class="row">
-				<h2 class="form-header">Output</h2>
-				<p class="flow-text">updated when LOGIN button is pushed</p>
-				<table class="centered responsive-table">
-					<thead>
-						<tr>
-							<th>RAW</th>
-							<th>PROCESSED</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td id="raw"></td>
-							<td id="processed"></td>
-						</tr>
-					</tbody>
-				</table>
+				<div class="row">
+					<h2 class="form-header">Output</h2>
+					<p class="flow-text">updated when LOGIN button is pushed</p>
+					<table class="centered responsive-table">
+						<thead>
+							<tr>
+								<th>RAW</th>
+								<th>PROCESSED</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td id="raw"></td>
+								<td id="processed"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 			<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 			<script>
 				$(document).ready(function(){
-					$("#login").click(function(){$("#processed").text($("#pwd").val());return false;});
+					$("#login").click(function(event){
+						window.setTimeout(function(){
+							$("#processed").text($("#pwd").val());
+						}, 500); //give time for mellon.js to run
+						//return false;
+					});
 					$("#pwd").on("input",function(){$("#raw").text($(this).val());})
 				});
 			</script>

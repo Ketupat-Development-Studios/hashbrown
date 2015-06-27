@@ -1,12 +1,16 @@
 #Mellon
 
+![vanilla.js](http://vanilla-js.com/assets/button.png)
+
 ***Speak, friend, and enter***
 
-Mellon is a Chrome extension which automagically salts your passwords and peppers your steaks (patent soon to be pending). It's the reason the great Dwarven city of Moria manages to use a such an insecure password yet remains unpenetrable to all unwordly creatures? Moving on... 
+Mellon is a Chrome extension which automagically salts your passwords and peppers your steaks (patent soon to be pending). It's the reason the great Dwarven city of Moria manages to use a such an insecure password yet remains unpenetrable<sup>*</sup> to all unwordly creatures.
+
+<sup>*</sup> <sup><sub>targeted attacks by Balrogs or otherwise aside</sub></sup>
 
 ##How It Works
 
-Mellon looks for password fields, blindfolds itself then [salts and hashes your password](http://security.stackexchange.com/questions/51959/why-are-salted-hashes-more-secure) using a the domain name of the site. 
+Mellon looks for password fields, blindfolds itself then [salts and hashes your password](http://security.stackexchange.com/questions/51959/why-are-salted-hashes-more-secure) using a the domain name of the site.
 
 Say your password is `hashbrown`. That's pretty insecure.
 
@@ -30,10 +34,20 @@ For an even more secure experience, Mellon will soon allow you to do the followi
 * Select a custom hashing algorithm (for tinfoil hat owners)
 * Order a salted hashbrown from the comfort of your home (stretch goal)
 
+##Known Issues
+
+(these may be unfixable)
+
+###Messes with browser password autofill
+
+Browser will unwittingly save your hashed password and fill it in for you the next time, so mellon will helpfully rehash it for you and you won't be able to login.
+
+**Current fix:** Turn off browser saving of passwords. If you use mellon, you'll have significantly fewer passwords to remember anyway.
+
 ##I'm a security researcher/enthuasist/genius/etc and this isn't secure at all
 
-Compared to using `hashbrown`, salting and hashing client side is objectively more secure. Yes it's true that if an attacker knows you use Mellon, this approach is much less useful. However, few security measures are much help against a sustained, targeted attack. 
+Compared to using `hashbrown`, salting and hashing client side is objectively more secure. Yes it's true that if an attacker knows you use Mellon, this approach is much less useful. However, few security measures are much help against a sustained, targeted attack.
 
 ##Thanks For All The Fish
 
-* Using [min.js](https://github.com/remy/min.js/) and [jsSHA]()
+Using [min.js](https://github.com/remy/min.js/) and the [CryptoJS](https://code.google.com/p/crypto-js/)

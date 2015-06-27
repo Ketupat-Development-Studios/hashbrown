@@ -21,3 +21,11 @@ sftp-config.json
 
 # Linux trash folder which might appear on any partition or disk
 .Trash-*
+
+
+### Caret (Chrome) ###
+mellon
+
+
+### Private Keyfile ###
+mellon.pem
