@@ -1,16 +1,14 @@
-#Mellon
+#Hashbrown
 
 ![vanilla.js](http://vanilla-js.com/assets/button.png)
 
 ***Speak, friend, and enter***
 
-Mellon is a Chrome extension which automagically salts your passwords and peppers your steaks (patent soon to be pending). It's the reason the great Dwarven city of Moria manages to use a such an insecure password yet remains unpenetrable<sup>*</sup> to all unwordly creatures.
-
-<sup>*</sup> <sup><sub>targeted attacks by Balrogs or otherwise aside</sub></sup>
+Hashbrown is a Chrome extension which automagically salts your passwords and peppers your steaks (patent soon to be pending). 
 
 ##How It Works
 
-Mellon looks for password fields, blindfolds itself then [salts and hashes your password](http://security.stackexchange.com/questions/51959/why-are-salted-hashes-more-secure) using a the domain name of the site.
+Hashbrown looks for password fields, blindfolds itself then [salts and hashes your password](http://security.stackexchange.com/questions/51959/why-are-salted-hashes-more-secure) using a the domain name of the site.
 
 Say your password is `hashbrown`. That's pretty insecure.
 
@@ -18,7 +16,7 @@ Say your password is `hashbrown`. That's pretty insecure.
 
 *The Elvish word for 'friend' is the 19,031st word in the Elvish dictionary.  At one word per second, YOU do the math. Taken from the [Abstruse Goose](http://abstrusegoose.com/296).*
 
-But you're lazy like most people and want to use this everywhere for you Gmail, Facebook, online banking and even that shady forum. You don't need a security researcher to tell you that's probably a bad idea, But Mellon allows you to do that quite a bit more securely.
+But you're lazy like most people and want to use this everywhere for you Gmail, Facebook, online banking and even that shady forum. You don't need a security researcher to tell you that's probably a bad idea, But Hashbrown allows you to do that quite a bit more securely.
 
 It adds a string of characters to the your password based on the domain of the site you're trying to sign into. `hashbrown` on `http://mail.google.com` becomes `hashbrown|mail.google.com`.  This process is known in security circles as salting.
 
@@ -40,7 +38,7 @@ For an even more secure experience, Mellon will soon allow you to do the followi
 
 ###Messes with browser password autofill
 
-Browser will unwittingly save your hashed password and fill it in for you the next time, so mellon will helpfully rehash it for you and you won't be able to login.
+Browser will unwittingly save your hashed password and fill it in for you the next time, so hashbrown will helpfully rehash it for you and you won't be able to login.
 
 **Current fix:** Turn off browser saving of passwords. If you use mellon, you'll have significantly fewer passwords to remember anyway.
 

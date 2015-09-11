@@ -29,3 +29,6 @@ mellon
 
 ### Private Keyfile ###
 mellon.pem
+
+### Zed (Chrome) ###
+.zedstate
