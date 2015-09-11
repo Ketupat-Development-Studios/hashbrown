@@ -38,13 +38,13 @@ For an even more secure experience, Mellon will soon allow you to do the followi
 
 ###Messes with browser password autofill
 
-Browser will unwittingly save your hashed password and fill it in for you the next time, so hashbrown will helpfully rehash it for you and you won't be able to login.
+Browser will unwittingly save your hashed password and fill it in for you the next time, so Hashbrown will helpfully rehash it for you and you won't be able to login.
 
-**Current fix:** Turn off browser saving of passwords. If you use mellon, you'll have significantly fewer passwords to remember anyway.
+**Current fix:** Turn off browser saving of passwords. If you use Hashbrown, you'll have significantly fewer passwords to remember anyway.
 
 ##I'm a security researcher/enthuasist/genius/etc and this isn't secure at all
 
-Compared to using `hashbrown`, salting and hashing client side is objectively more secure. Yes it's true that if an attacker knows you use Mellon, this approach is much less useful. However, few security measures are much help against a sustained, targeted attack.
+Compared to using `hashbrown`, salting and hashing client side is objectively more secure. Yes it's true that if an attacker knows you use Hashbrown, this approach is much less useful. However, few security measures are much help against a sustained, targeted attack.
 
 ##Thanks For All The Fish
 

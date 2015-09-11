@@ -4,6 +4,7 @@
   "name": "Hashbrown",
   "description": "safely use the same password everywhere",
   "version": "1.0",
+  "options_page": "html/options.html",
 
   "icons": {
     "16": "icons/icon_016.png",
@@ -12,7 +13,12 @@
     "128": "icons/icon_128.png",
     "256": "icons/icon_256.png",
     "512": "icons/icon_512.png" },
-
+    
+  "browser_action": {
+    "default_icon": "icons/icon_19.png",
+    "default_popup": "popup.html"
+  },
+  
   "content_scripts": [
     {
       "matches": ["http://*/*"],

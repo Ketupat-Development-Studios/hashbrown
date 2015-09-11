@@ -1,0 +1,41 @@
+<html lang="en" ng-app="hashbrown">
+  <head>
+    <link rel="stylesheet" href="../includes/angular-material.min.css">
+    <link rel="stylesheet" href="../includes/fonts.css">
+    <meta name="viewport" content="initial-scale=1" />
+    <title>Hashbrown Options</title>
+  </head>
+  <body layout="row" ng-controller="optionsCtrl as op" layout-align="center">
+    <div flex-sm="100" flex-gt-sm="70">
+        
+        <md-content>
+            <h3 class="md-display-2 center-align thin">Hashbrown</h3>
+        </md-content>
+    
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+              <h2 class="md-flex">Security Options</h2>
+          </div>
+        </md-toolbar>
+        <md-content class="md-title" layout-margin layout-padding layout="column">
+          <md-input-container flex>
+              <label>Custom Salt</label>
+              <input ng-model="nacl" type="text">
+          </md-input-container>
+          <md-input-container flex>
+              <label>Hash</label>
+              <md-select ng-model="hash">
+                <md-option ng-repeat="hashtype in hashtypes" value="{{hashtype}}">{{hashtype}}</md-option>
+              </md-select>
+          </md-input-container>
+        </md-content>
+    </div>
+    
+    <script src="../includes/angular.min.js"></script>
+    <script src="../includes/angular-animate.min.js"></script>
+    <script src="../includes/angular-aria.min.js"></script>
+    <script src="../includes/angular-material.min.js"></script>
+    
+    <script src="../js/settings.js"></script>
+  </body>
+</html>
