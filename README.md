@@ -1,4 +1,4 @@
-#Hashbrown
+# Hashbrown
 
 ![vanilla.js](http://vanilla-js.com/assets/button.png)
 
@@ -6,7 +6,7 @@
 
 Hashbrown is a Chrome extension which automagically salts your passwords and peppers your steaks (patent soon to be pending). 
 
-##How It Works
+## How It Works
 
 Hashbrown looks for password fields, blindfolds itself then [salts and hashes your password](http://security.stackexchange.com/questions/51959/why-are-salted-hashes-more-secure) using a the domain name of the site.
 
@@ -24,7 +24,7 @@ That's better because you're now using a unique password for each site. `hashbro
 
 This has the added (unintentional but great!) effect of rendering conventional keyloggers useless because they'll record `hashbrown` but not your spanking new salted password.
 
-##More Cool Stuff
+## More Cool Stuff
 
 For an even more secure experience, Mellon will soon allow you to do the following:
 
@@ -32,20 +32,20 @@ For an even more secure experience, Mellon will soon allow you to do the followi
 * Select a custom hashing algorithm (for tinfoil hat owners)
 * Order a salted hashbrown from the comfort of your home (stretch goal)
 
-##Known Issues
+## Known Issues
 
 (these may be unfixable)
 
-###Messes with browser password autofill
+### Messes with browser password autofill
 
 Browser will unwittingly save your hashed password and fill it in for you the next time, so Hashbrown will helpfully rehash it for you and you won't be able to login.
 
 **Current fix:** Turn off browser saving of passwords. If you use Hashbrown, you'll have significantly fewer passwords to remember anyway.
 
-##I'm a security researcher/enthuasist/genius/etc and this isn't secure at all
+## I'm a security researcher/enthuasist/genius/etc and this isn't secure at all
 
-Compared to using `hashbrown`, salting and hashing client side is objectively more secure. Yes it's true that if an attacker knows you use Hashbrown, this approach is much less useful. However, few security measures are much help against a sustained, targeted attack.
+Yes it's true that if an attacker knows you use Hashbrown, this approach is much less useful. However, few security measures are convenient yet helpful against a sustained, targeted attack.
 
-##Thanks For All The Fish
+## Thanks For All The Fish
 
 Using [min.js](https://github.com/remy/min.js/) and the [CryptoJS](https://code.google.com/p/crypto-js/)
